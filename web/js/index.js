@@ -37,6 +37,7 @@ $(document).ready(function () {
     genBoardDiv();
     regImgClick();
     regMenuClick();
+    regArticleClick();
 });
 
 /**
@@ -95,16 +96,16 @@ function genBoardDiv() {
         var html = [];
         if (obj.display) {
             html.push("<div class='boardDiv " + ((num % 2) ? 'odd' : '') + "'><div class='bdTitle'><a class='boardAll' href='#' data-menu='" + obj.menu + "'>" + obj.menu + "</a></div>");
-            html.push("<div><ul>");
+            html.push("<div><ul class='article'>");
             var count = 0;
             if (obj.board && obj.board.length > 0) {
                 obj.board.forEach(function (board) {
-                    if (board.display && count < 6) {
+                    if (board.display && count < 10) {
                         if (board.article && board.article.length > 0) {
                             board.article.forEach(function (article) {
-                                if (article.display && article.title && count < 6) {
+                                if (article.display && article.title && count < 10) {
                                     count++;
-                                    html.push("<li><a href='#' style='" + article.style + "' data-menu='" + obj.menu + "' data-url='" + article.url + "'>" + article.title + "</a></li>")
+                                    html.push("<li><a href='#' style='" + article.style + "' data-menu='" + obj.menu + "' data-page='" + article.url + "'>" + article.title + "</a></li>")
                                 }
                             })
                         }
@@ -112,9 +113,9 @@ function genBoardDiv() {
                 })
             } else if (obj.article && obj.article.length > 0) {
                 obj.article.forEach(function (article) {
-                    if (article.display && article.title && count < 6) {
+                    if (article.display && article.title && count < 10) {
                         count++;
-                        html.push("<li><a href='#' style='" + article.style + "' data-menu='" + obj.menu + "' data-url='" + article.url + "'>" + article.title + "</a></li>")
+                        html.push("<li><a href='#' style='" + article.style + "' data-menu='" + obj.menu + "' data-page='" + article.url + "'>" + article.title + "</a></li>")
                     }
                 })
             }
@@ -124,6 +125,72 @@ function genBoardDiv() {
             html.push("</ul></div></div>");
             $indexDiv.append(html.join(''));
             num++;
+        }
+    })
+}
+
+/**
+ * 搜索点击事件
+ */
+$("#submit").click(function () {
+    var title = $("#searchTitle").val();
+    if (title && title.length > 0) {
+        var html = [];
+        var count = 0;
+        html.push("<ul class='articleListUl article'>");
+        news.forEach(function (obj) {
+            if (obj.display) {
+                if (obj.board && obj.board.length > 0) {
+                    obj.board.forEach(function (board) {
+                        if (board.display) {
+                            if (board.article && board.article.length > 0) {
+                                board.article.forEach(function (article) {
+                                    if (article.display && article.title && article.title.indexOf(title) >= 0) {
+                                        html.push("<li><a href='#' style='" + article.style + "' data-menu='" + obj.menu + "' data-page='" + article.url + "'>" + article.title + "</a></li>")
+                                        count++;
+                                    }
+                                })
+                            }
+                        }
+                    })
+                }
+                else if (obj.article && obj.article.length > 0) {
+                    obj.article.forEach(function (article) {
+                        if (article.display && article.title && article.title.indexOf(title) >= 0) {
+                            html.push("<li><a href='#' style='" + article.style + "' data-menu='" + obj.menu + "' data-page='" + article.url + "'>" + article.title + "</a></li>")
+                            count++;
+                        }
+                    })
+                }
+            }
+        });
+        html.push("</ul>");
+        if (count === 0) {
+            html = [];
+            html.push("未查找到包含搜索值的文章！")
+        }
+        $menuLi.removeClass('active');
+        $indexDiv.hide();
+        $articleDetail.children().remove();
+        $articleDetail.text('');
+        $articleList.children().remove();
+        $articleList.append(html.join(''));
+        if(count!==0) {
+            regArticleClick();
+        }
+    }
+});
+
+/**
+ * 注册文章列表点击事件
+ */
+function regArticleClick() {
+    $("ul.article a").off('click').click(function () {
+        var dataMenu = $(this).attr("data-menu"),
+            dataPage = $(this).attr("data-page"),
+            dataType = $(this).attr("data-type");
+        if (dataMenu && dataPage && !dataType) {
+            articleLinkClick(this);
         }
     })
 }
@@ -151,9 +218,12 @@ function regMenuClick() {
         }
 
         genArticleList(article, dataMenu);
+        regArticleClick();
         $menuLi.removeClass('active');
         $(".msNav a[data-menu=" + dataMenu + "]").parent().addClass('active');
         $indexDiv.hide();
+        $articleDetail.children().remove();
+        $articleDetail.text('');
     })
 }
 
@@ -164,7 +234,7 @@ function regMenuClick() {
 function genArticleList(article, dataMenu) {
     var html = [];
     if (article && article.length > 0) {
-        html.push("<ul class='articleListUl'>");
+        html.push("<ul class='articleListUl article'>");
         article.forEach(function (article) {
             if (article.display) {
                 html.push(" <li><a href='#' data-menu='" + dataMenu + "' style='" + article.style + "' data-page='" + article.url + "'>" + article.title + "</a></li>")
@@ -237,12 +307,20 @@ function articleLinkClick(a) {
     $.ajax({
         url: 'article/' + url,
         type: 'get',
-        contentType: 'application/text; charset=UTF-8',
+        contentType: "application/x-www-form-urlencoded; charset=utf-8",
         success: function (data) {
             $menuLi.removeClass('active');
             $(".msNav a[data-menu=" + menu + "]").parent().addClass('active');
             $indexDiv.hide();
+            $articleList.children().remove();
             $articleDetail.append(data);
+        },
+        error: function () {
+            $menuLi.removeClass('active');
+            $(".msNav a[data-menu=" + menu + "]").parent().addClass('active');
+            $indexDiv.hide();
+            $articleList.children().remove();
+            $articleDetail.append("该文章已不存在！");
         }
     })
 }

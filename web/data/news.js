@@ -11,48 +11,71 @@ var news = [{
             carousel: true
         },
         {
-            title: "李克强主持召开国务院常务会议",
+            title: "第二个百年的阶段目标有哪些特点",
             display: true,
             img: "",
-            url: "",
+            url: "第二个百年的阶段目标有哪些特点.html",
             carousel: false
-        }
-    ]
-}, {
-    menu: "军事高科技",
-    display: true,
-    article: [
-        {
-            title: "胡塞武装击落F-15 不经意间创造两个“第一”",
+        }, {
+            title: "十九大报告相关名词解释",
             display: true,
-            img: "img/img1.jpg",
-            url: "article1.html",
-            carousel: true
+            img: "",
+            url: "十九大报告相关名词解释.html",
+            carousel: false
         },
         {
-            title: "中国某新型潜舰导弹系统获国家科技进步特等奖",
+            title: "十九大大知识题库",
             display: true,
-            img: "img/img2.jpg",
-            url: "article1.html",
-            carousel: true
+            img: "",
+            url: "十九大大知识题库.html",
+            carousel: false
+        },
+        {
+            title: "为什么说从现在到2020年是全面建成小康社会的决期",
+            display: true,
+            img: "",
+            url: "为什么说从现在到2020年是全面建成小康社会的决期.html",
+            carousel: false
+        },
+        {
+            title: "怎样认识全面建成社会主义国家",
+            display: true,
+            img: "",
+            url: "怎样认识全面建成社会主义国家.html",
+            carousel: false
+        },
+        {
+            title: "如何理解到2035年基本实现现代化的目标",
+            display: true,
+            img: "",
+            url: "如何理解到2035年基本实现现代化的目标.html",
+            carousel: false
         }
+
     ]
-}, {
+},  {
     menu: "学法用法",
     display: true,
     article: [
         {
-            title: "江苏启动环保专项行动督查",
+            title: "军人违反职责罪",
             display: true,
             img: "",
-            url: "",
+            url: "军人违反职责罪.html",
             carousel: true
         },
         {
-            title: "土耳其货币崩盘！中国金融体系能抗风险吗？",
+            title: "中国人民解放军纪律条令",
             display: true,
             img: "",
-            url: "",
+            url: "中国人民解放军纪律条令.html",
+            carousel: false
+        },
+        {
+            title: "中华人民共和国兵役法",
+            display: true,
+            img: "",
+            url: "中华人民共和国兵役法.html",
             carousel: false
         }
     ]
@@ -61,17 +84,24 @@ var news = [{
     display: true,
     article: [
         {
-            title: "汪洋会见法国国民议会第一副议长博纳尔",
+            title: "当年解放军凭啥战胜强大的国民党军",
             display: true,
-            img: "",
-            url: "",
+            img: "/img/j1.jpg",
+            url: "当年解放军凭啥战胜强大的国民党军.html",
             carousel: true
         },
         {
-            title: "王沪宁出席纪念马克思诞辰理论研讨会",
+            title: "四个自信",
             display: true,
             img: "",
-            url: "",
+            url: "四个自信.html",
+            carousel: false
+        },
+        {
+            title: "文化自信与民族复兴",
+            display: true,
+            img: "",
+            url: "文化自信与民族复兴.html",
             carousel: false
         }
     ]
@@ -81,18 +111,44 @@ var news = [{
     display: true,
     article: [
         {
-            title: "独家|美国制裁逼急伊朗 中东笼罩核战争阴云？",
+            title: "武警部队简介",
             display: true,
             img: "",
-            url: "",
+            url: "武警部队简介.html",
             carousel: true
         },
         {
-            title: "没对比就没伤害：S400与爱国者3谁更牛？",
+            title: "武警有个哪些体制调整",
             display: true,
             img: "",
-            url: "",
+            url: "武警有个哪些体制调整.html",
             carousel: false
+        },
+        {
+            title: "中国人民武装警察部队警官学院",
+            display: true,
+            img: "",
+            url: "中国人民武装警察部队警官学院.html",
+            carousel: false
+        }
+    ]
+},{
+    menu: "军事高科技",
+    display: true,
+    article: [
+        {
+            title: "武警黄金部队携手“国家队”打造军事地质数据库",
+            display: true,
+            img: "img/img1.jpg",
+            url: "武警黄金部队携手“国家队”打造军事地质数据库.html",
+            carousel: true
+        },
+        {
+            title: "中国某新型潜舰导弹系统获国家科技进步特等奖",
+            display: false,
+            img: "img/img2.jpg",
+            url: "article1.html",
+            carousel: true
         }
     ]
 },
@@ -101,40 +157,10 @@ var news = [{
         display: true,
         article: [
             {
-                title: "对手主帅“吐槽”中国女排！郎平板脸表情包又上线",
+                title: "解放军报电子版",
                 display: true,
                 img: "",
-                url: ""
-            },
-            {
-                title: "亚运第二日：中国继续领跑金牌榜 孙杨徐嘉余再添金",
-                display: true,
-                img: "",
-                url: ""
-            },
-            {
-                title: "亚运第二日：中国继续领跑金牌榜 孙杨徐嘉余再添金",
-                display: true,
-                img: "",
-                url: ""
-            },
-            {
-                title: "亚运第二日：中国继续领跑金牌榜 孙杨徐嘉余再添金",
-                display: true,
-                img: "",
-                url: ""
-            },
-            {
-                title: "亚运第二日：中国继续领跑金牌榜 孙杨徐嘉余再添金",
-                display: true,
-                img: "",
-                url: ""
-            },
-            {
-                title: "亚运第二日：中国继续领跑金牌榜 孙杨徐嘉余再添金",
-                display: true,
-                img: "",
-                url: ""
+                url: "解放军报电子版.html"
             }
         ]
     }

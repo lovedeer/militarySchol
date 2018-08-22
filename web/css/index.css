@@ -165,3 +165,11 @@
     margin: 0;
     border: none;
 }
+
+.nav > li > a:visited {
+    text-decoration: none !important;
+}
+
+.activeDetail span {
+    color :#333333
+}
