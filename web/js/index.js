@@ -58,6 +58,14 @@ function genCarousel() {
                         })
                     }
                 })
+            } else if (obj.article && obj.article.length > 0) {
+                obj.article.forEach(function (article) {
+                    if (article.display && article.carousel && article.img && article.img.length > 0 && article.url && article.url.length > 0) {
+                        $carouselInner.append("<div class='item'>" +
+                            "<img src='" + article.img + "'>" +
+                            "<div class='carouselDiv'><a href='#' data-menu='" + obj.menu + "' class='carouselTitle' data-type='article' data-page='" + article.url + "'>" + article.title + "</a></div></div>")
+                    }
+                })
             }
         }
     });
@@ -229,6 +237,7 @@ function articleLinkClick(a) {
     $.ajax({
         url: 'article/' + url,
         type: 'get',
+        contentType: 'application/text; charset=UTF-8',
         success: function (data) {
             $menuLi.removeClass('active');
             $(".msNav a[data-menu=" + menu + "]").parent().addClass('active');
