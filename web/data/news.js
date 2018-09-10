@@ -1,60 +1,5 @@
 var news = [{
-    menu: "政治理论",
-    display: true,
-    article: [
-        {
-            title: "党的十九大报告",
-            display: true,
-            img: "img/img3.jpg",
-            url: "党的十九大报告.html",
-            style: "font-weight:600",
-            carousel: true
-        },
-        {
-            title: "第二个百年的阶段目标有哪些特点",
-            display: true,
-            img: "",
-            url: "第二个百年的阶段目标有哪些特点.html",
-            carousel: false
-        }, {
-            title: "十九大报告相关名词解释",
-            display: true,
-            img: "",
-            url: "十九大报告相关名词解释.html",
-            carousel: false
-        },
-        {
-            title: "十九大大知识题库",
-            display: true,
-            img: "",
-            url: "十九大大知识题库.html",
-            carousel: false
-        },
-        {
-            title: "为什么说从现在到2020年是全面建成小康社会的决期",
-            display: true,
-            img: "",
-            url: "为什么说从现在到2020年是全面建成小康社会的决期.html",
-            carousel: false
-        },
-        {
-            title: "怎样认识全面建成社会主义国家",
-            display: true,
-            img: "",
-            url: "怎样认识全面建成社会主义国家.html",
-            carousel: false
-        },
-        {
-            title: "如何理解到2035年基本实现现代化的目标",
-            display: true,
-            img: "",
-            url: "如何理解到2035年基本实现现代化的目标.html",
-            carousel: false
-        }
-
-    ]
-},  {
-    menu: "学法用法",
+    menu: "法律法规",
     display: true,
     article: [
         {
@@ -77,90 +22,175 @@ var news = [{
             img: "",
             url: "中华人民共和国兵役法.html",
             carousel: false
+        },{
+            title: "中国人民解放军军营开放办法",
+            display: true,
+            img: "/img/j1.jpg",
+            url: "中国人民解放军军营开放办法.html",
+            carousel: true
         }
     ]
-}, {
-    menu: "名人讲坛",
+},  {
+    menu: "法律讲堂",
     display: true,
     article: [
         {
-            title: "当年解放军凭啥战胜强大的国民党军",
+            title: "“执行难”与“执行不能” 的区别与处理",
             display: true,
-            img: "/img/j1.jpg",
-            url: "当年解放军凭啥战胜强大的国民党军.html",
+            img: "",
+            url: "“执行难”与“执行不能” 的区别与处理.html",
             carousel: true
         },
         {
-            title: "四个自信",
+            title: "浅议家事案件执行难的原因及解决构想",
             display: true,
             img: "",
-            url: "四个自信.html",
+            url: "浅议家事案件执行难的原因及解决构想.html",
             carousel: false
         },
         {
-            title: "文化自信与民族复兴",
+            title: "如何理解“法无禁止即可为”",
             display: true,
             img: "",
-            url: "文化自信与民族复兴.html",
+            url: "如何理解“法无禁止即可为”.html",
+            carousel: false
+        },
+        {
+            title: "中纪委特邀监察员马怀德教授终于对监察法草案发表意见",
+            display: true,
+            img: "",
+            url: "中纪委特邀监察员马怀德教授终于对监察法草案发表意见.html",
+            carousel: false
+        }
+    ]
+}, {
+    menu: "法律咨询",
+    display: true,
+    article: [
+        {
+            title: "残疾军人乘坐各类交通工具时有优待照顾吗",
+            display: true,
+            img: "",
+            url: "残疾军人乘坐各类交通工具时有优待照顾吗.html",
+            carousel: false
+        },
+        {
+            title: "撤离事故现场后报案，交警还管吗？",
+            display: true,
+            img: "",
+            url: "撤离事故现场后报案，交警还管吗？.html",
+            carousel: false
+        },
+        {
+            title: "拒不执行判决、裁定罪中“情节严重”的情形有哪些？",
+            display: true,
+            img: "",
+            url: "拒不执行判决、裁定罪中“情节严重”的情形有哪些？.html",
+            carousel: false
+        },
+        {
+            title: "什么是刑法上的法律认识错误",
+            display: true,
+            img: "",
+            url: "什么是刑法上的法律认识错误.html",
             carousel: false
         }
     ]
 
 }, {
-    menu: "武警史志",
+    menu: "法治视野",
     display: true,
     article: [
         {
-            title: "武警部队简介",
+            title: "高空坠物砸伤他人所有业主都要背锅",
             display: true,
             img: "",
-            url: "武警部队简介.html",
+            url: "高空坠物砸伤他人所有业主都要背锅.html",
             carousel: true
         },
         {
-            title: "武警有个哪些体制调整",
+            title: "网络犯罪主体日趋专业化 犯罪后果日趋严重",
             display: true,
             img: "",
-            url: "武警有个哪些体制调整.html",
+            url: "网络犯罪主体日趋专业化 犯罪后果日趋严重.html",
             carousel: false
         },
         {
-            title: "中国人民武装警察部队警官学院",
+            title: "网络没有攻不破的“马奇诺防线”",
             display: true,
             img: "",
-            url: "中国人民武装警察部队警官学院.html",
+            url: "网络没有攻不破的“马奇诺防线”.html",
+            carousel: false
+        },
+        {
+            title: "中国历史上为什么没有贪腐的皇帝",
+            display: true,
+            img: "",
+            url: "中国历史上为什么没有贪腐的皇帝.html",
             carousel: false
         }
     ]
 },{
-    menu: "军事高科技",
+    menu: "法治要闻",
     display: true,
     article: [
         {
-            title: "武警黄金部队携手“国家队”打造军事地质数据库",
+            title: "开启全面依法治国新时代 ——党的十八大以来全面依法治国新成就述评",
             display: true,
-            img: "img/img1.jpg",
-            url: "武警黄金部队携手“国家队”打造军事地质数据库.html",
+            img: "img/img3.jpg",
+            url: "开启全面依法治国新时代 ——党的十八大以来全面依法治国新成就述评.html",
             carousel: true
         },
         {
-            title: "中国某新型潜舰导弹系统获国家科技进步特等奖",
-            display: false,
-            img: "img/img2.jpg",
-            url: "article1.html",
-            carousel: true
+            title: "女子跳河武警战士出手相救 救人一刻忘记水性不好",
+            display: true,
+            img: "",
+            url: "女子跳河武警战士出手相救 救人一刻忘记水性不好.html",
+            carousel: false
+        },
+        {
+            title: "人民军队法制建设八十年",
+            display: true,
+            img: "",
+            url: "人民军队法制建设八十年.html",
+            carousel: false
+        },
+        {
+            title: "深入推进依法治军、从严治军",
+            display: true,
+            img: "",
+            url: "深入推进依法治军、从严治军.html",
+            carousel: false
         }
     ]
 },
     {
-        menu: "电子报刊",
+        menu: "举案说法",
         display: true,
         article: [
             {
-                title: "解放军报电子版",
+                title: "北京5旬大妈持剪刀扎百余车胎 涉嫌寻衅滋事已被刑事拘留",
                 display: true,
                 img: "",
-                url: "解放军报电子版.html"
+                url: "北京5旬大妈持剪刀扎百余车胎 涉嫌寻衅滋事已被刑事拘留.html"
+            },
+            {
+                title: "澄城一男子网络诈骗48万 获刑八年半并责令退赔",
+                display: true,
+                img: "",
+                url: "澄城一男子网络诈骗48万 获刑八年半并责令退赔.html"
+            },
+            {
+                title: "非法营运抗拒检查 撞伤执法人员领刑一年半",
+                display: true,
+                img: "",
+                url: "非法营运抗拒检查 撞伤执法人员领刑一年半.html"
+            },
+            {
+                title: "意外伤害想维权，举证才有硬道理",
+                display: true,
+                img: "",
+                url: "意外伤害想维权，举证才有硬道理.html"
             }
         ]
     }

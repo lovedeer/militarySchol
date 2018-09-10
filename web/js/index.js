@@ -126,7 +126,10 @@ function genBoardDiv() {
             $indexDiv.append(html.join(''));
             num++;
         }
-    })
+    });
+
+    $indexDiv.append("<div class='boardDiv odd'><img src='/img/img1.jpg' style=' height: 175px;width: 500px;'></div>");
+
 }
 
 /**
@@ -175,7 +178,7 @@ $("#submit").click(function () {
         $articleDetail.text('');
         $articleList.children().remove();
         $articleList.append(html.join(''));
-        if(count!==0) {
+        if (count !== 0) {
             regArticleClick();
         }
     }
@@ -325,6 +328,11 @@ function articleLinkClick(a) {
     })
 }
 
+/**
+ * 是否有可以显示的版块
+ * @param obj
+ * @returns {boolean}
+ */
 function hasShowBoard(obj) {
     if (!obj.board || obj.board.length === 0) {
         return false;
